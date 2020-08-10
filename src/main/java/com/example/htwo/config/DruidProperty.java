@@ -6,6 +6,9 @@ import org.springframework.context.annotation.Configuration;
 
 import java.sql.SQLException;
 
+/**
+ * 连接池配置
+ */
 @Configuration
 public class DruidProperty {
     @Value("${spring.datasource.druid.initialSize}")

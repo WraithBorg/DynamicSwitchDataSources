@@ -1,9 +1,12 @@
-package com.example.htwo.entity;
+package com.example.htwo.entity.mysql;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 
-@TableName("sys_user")
-public class SysUser {
+/**
+ * 用户信息
+ */
+@TableName("sys_user_mysql")
+public class User4Mysql {
     private Long id;
     private String name;
     private Integer age;

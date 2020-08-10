@@ -1,7 +1,6 @@
 package com.example.htwo.service;
 
-import com.example.htwo.entity.SysUser;
-import com.example.htwo.mapper.SysUserMapper;
+import com.example.htwo.mapper.mysql.User4MysqlMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -9,10 +8,10 @@ import javax.annotation.Resource;
 
 @Service
 @Transactional
-public class SysUserServiceImpl implements SysUserService {
+public class User4MysqlServiceImpl implements User4MysqlService {
 
     @Resource
-    private SysUserMapper userMapper;
+    private User4MysqlMapper userMapper;
 
     @Override
     public void updateUser(String id) {

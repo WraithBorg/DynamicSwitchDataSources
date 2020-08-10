@@ -1,10 +1,12 @@
 package com.example.htwo;
 
-import com.example.htwo.entity.SysUser;
-import com.example.htwo.mapper.SysUserMapper;
-import com.example.htwo.service.SysUserService;
-import com.example.htwo.utils.InstallUtils;
-import org.junit.Assert;
+import com.example.htwo.entity.h2.BillCache4H2;
+import com.example.htwo.entity.mysql.User4Mysql;
+import com.example.htwo.eum.DbNameEum;
+import com.example.htwo.mapper.h2.BillCache4H2Mapper;
+import com.example.htwo.mapper.mysql.User4MysqlMapper;
+import com.example.htwo.service.User4MysqlService;
+import com.example.htwo.component.SprDbNameThread;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,24 +19,24 @@ import java.util.List;
 @SpringBootTest
 public class ATest {
 
-
     @Resource
-    private SysUserMapper userMapper;
+    private BillCache4H2Mapper billCache4H2Mapper;
     @Resource
-    private SysUserService userService;
+    private User4MysqlMapper userMapper;
+    @Resource
+    private User4MysqlService userService;
 
     @Test
     public void testSelect() {
-        InstallUtils.isInstall = false;
+        SprDbNameThread.set(DbNameEum.MYSQL.name());
         System.out.println(("----- selectAll method test ------"));
-        List<SysUser> userList = userMapper.selectList(null);
+        List<User4Mysql> userList = userMapper.selectList(null);
         userList.forEach(System.out::println);
 
-        InstallUtils.isInstall = true;
-        userList = userMapper.selectList(null);
-        userList.forEach(System.out::println);
-        //
-        userService.updateUser("1");
-
+        SprDbNameThread.set(DbNameEum.H2.name());
+        BillCache4H2 billCache4H2 = new BillCache4H2("billNo", 1, "message", " errorCode");
+        billCache4H2Mapper.insert(billCache4H2);
+        List<BillCache4H2> billCache4H2s = billCache4H2Mapper.selectList(null);
+        billCache4H2s.forEach(System.out::println);
     }
 }
