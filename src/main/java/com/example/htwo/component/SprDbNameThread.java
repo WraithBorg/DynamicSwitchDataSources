@@ -5,10 +5,12 @@ package com.example.htwo.component;
  */
 public class SprDbNameThread {
     private static ThreadLocal<String> dataType = new ThreadLocal<>();
-    public static void set(String name){
+
+    public static void set(String name) {
         dataType.set(name);
     }
-    public static String get(){
-       return  dataType.get();
+
+    public static String get() {
+        return dataType.get();
     }
 }

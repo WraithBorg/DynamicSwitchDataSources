@@ -54,8 +54,7 @@ public class DataSourceConfiguration {
                 currentDataSource = mysqlDataSource;
                 break;
             default:
-                currentDataSource = mysqlDataSource;
-                break;
+                throw new RuntimeException("找不到数据源");
         }
         return new DynamicDataSource(currentDataSource, targetDataSource);
     }

@@ -15,7 +15,7 @@ public class SprInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         // 如果请求路径包含h2 则使用h2数据源
-        if (request.getRequestURL().toString().contains("h2")) {
+        if (request.getRequestURL().toString().contains("h2i")) {
             SprDbNameThread.set(DbNameEum.H2.name());
         }else {
             SprDbNameThread.set(DbNameEum.MYSQL.name());

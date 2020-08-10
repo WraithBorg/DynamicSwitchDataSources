@@ -1,4 +1,4 @@
-package com.example.htwo.mapper.h2;
+package com.example.htwo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.htwo.entity.h2.BillCache4H2;
