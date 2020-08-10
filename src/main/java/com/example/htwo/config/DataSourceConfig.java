@@ -22,7 +22,7 @@ import java.util.Map;
  * 动态数据源配置
  */
 @Configuration
-public class DataSourceConfiguration {
+public class DataSourceConfig {
 
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.druid.h2")

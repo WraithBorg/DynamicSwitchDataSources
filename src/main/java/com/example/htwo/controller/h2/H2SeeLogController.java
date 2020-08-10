@@ -1,7 +1,7 @@
 package com.example.htwo.controller.h2;
 
 import com.example.htwo.entity.h2.BillCache4H2;
-import com.example.htwo.mapper.BillCache4H2Mapper;
+import com.example.htwo.mapper.h2.BillCache4H2Mapper;
 import com.example.htwo.result.DockResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

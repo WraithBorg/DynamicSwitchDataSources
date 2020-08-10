@@ -1,6 +1,6 @@
 package com.example.htwo.service;
 
-import com.example.htwo.mapper.User4MysqlMapper;
+import com.example.htwo.mapper.mysql.User4MysqlMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

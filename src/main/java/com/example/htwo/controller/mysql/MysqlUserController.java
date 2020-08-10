@@ -1,9 +1,8 @@
 package com.example.htwo.controller.mysql;
 
 import com.example.htwo.entity.mysql.User4Mysql;
-import com.example.htwo.mapper.User4MysqlMapper;
+import com.example.htwo.mapper.mysql.User4MysqlMapper;
 import com.example.htwo.result.DockResult;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

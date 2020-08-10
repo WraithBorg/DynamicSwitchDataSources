@@ -1,5 +1,11 @@
 #### H2数据库Web控制台
 `http://localhost:8889/demo/h2-console/login.do`
+```
+jdbc:h2:file:./db/h2-demo;AUTO_SERVER=TRUE;DB_CLOSE_DELAY=-1
+org.h2.Driver
+root
+test
+```
 
 #### 测试URL
 ```
@@ -45,18 +51,6 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 #### 初始化创建h2数据库
 ```
-DROP TABLE IF EXISTS BILL_CACHE_H2;
-
-CREATE TABLE BILL_CACHE_H2
-(
-    id BIGINT(20) NOT NULL AUTO_INCREMENT  COMMENT '主键ID' ,
-    bill_no VARCHAR(30) NULL DEFAULT NULL COMMENT '单号',
-    transfer_state INT(11) NULL DEFAULT NULL COMMENT '单据传输状态',
-    message VARCHAR(30) NULL DEFAULT NULL COMMENT '单据传输信息',
-    error_code VARCHAR(30) NULL DEFAULT NULL COMMENT '错误码',
-    create_date Datetime NULL DEFAULT NULL COMMENT '创建日期',
-    retries INT(11) NULL DEFAULT NULL COMMENT '传输重试次数',
-    PRIMARY KEY (id)
-);
-
+已集成在
+com.example.htwo.mapper.h2.SprDDLMapper.createTable_BIllCacheInfo 方法里
 ```
