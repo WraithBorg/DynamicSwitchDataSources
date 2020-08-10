@@ -1,7 +1,10 @@
 package com.example.htwo.mapper.h2;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+
+import java.util.List;
 
 public interface SprDDLMapper extends BaseMapper {
     @Update(" CREATE TABLE BILL_CACHE_H2\n" +
@@ -16,4 +19,8 @@ public interface SprDDLMapper extends BaseMapper {
             "    PRIMARY KEY (id)\n" +
             ");  ")
     public void createTable_BIllCacheInfo();
+
+    @Select(" show tables; ")
+    public List<String> showTables();
+
 }
