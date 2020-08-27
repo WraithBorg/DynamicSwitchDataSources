@@ -1,5 +1,5 @@
 package com.example.htwo.service;
 
-public interface User4MysqlService {
+public interface UserInfoService_Mysql {
     void updateUser(String id);
 }

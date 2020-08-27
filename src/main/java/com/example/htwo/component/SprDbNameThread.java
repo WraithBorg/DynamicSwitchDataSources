@@ -13,4 +13,7 @@ public class SprDbNameThread {
     public static String get() {
         return dataType.get();
     }
+    public static void remove() {
+        dataType.remove();
+    }
 }

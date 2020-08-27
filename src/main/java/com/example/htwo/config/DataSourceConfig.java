@@ -4,7 +4,6 @@ import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import com.alibaba.druid.support.spring.stat.DruidStatInterceptor;
 import com.example.htwo.component.SprDbNameThread;
-import com.example.htwo.datasource.DynamicDataSource;
 import com.example.htwo.eum.DbNameEum;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
 import org.springframework.aop.support.JdkRegexpMethodPointcut;
